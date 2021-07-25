@@ -1,0 +1,44 @@
+<html>
+    
+        <head>
+            <title>Visual studio Project 77</title>
+        </head>
+        <body class="body">
+            <h1>Open Console</h1>
+
+            <img src="Kalra family image.png" style="width: 30%;" id="family_member_image">
+
+            <h4 id="family_member_name"></h4>
+
+            <button id="update_button" onclick="update();">
+                Next
+            </button>
+
+        </body>
+            
+            <script>
+                console.log("I am console window.");
+
+                var images = 
+                ["DADU.jpg" , "MUMMA.HEIC" , "RANVEER.jpg"];
+
+                var names = 
+                ["Famiy Book" , "Mr.Onkar Singh Kalra" , "Mrs.Davinder Kaur Kalra", "Master Ranveer Singh Kalra"];
+
+
+                var i = 0;
+                function update()
+                {
+                    i++;
+                    var numbers_of_family_member_in_array = 5
+                    if(i > numbers_of_family_member_in_array)
+                    {
+                        i = 0;
+                    }
+
+                    var updateImage = images[i];
+                    var updateName = names[i];
+                    document.getElementById("family_member_image").src = updateImage;
+                    document.getElementById("family_member_name").innerHTML = updatedName;
+                }
+                
